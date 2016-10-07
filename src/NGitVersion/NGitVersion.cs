@@ -12,12 +12,16 @@ namespace NGitVersion
         private const string MODEL_VAR = @"m";
 
         // directories are relative to output project directory ${ProjectDir}\bin
-        private static string TEMPLATE_DIR = Path.Combine("..", "..", "Templates");
-        private static string OUTPUT_DIR = Path.Combine("..","..","Generated");
+        private static string TEMPLATE_DIR;
+        private static string OUTPUT_DIR;
         private const string MAIN_TEMPLATE_NAME = @"MainTemplate";
 
         public static void Main(string[] args)
         {
+            var projectPath = args[0];
+            TEMPLATE_DIR = Path.Combine(projectPath, "Templates");
+            OUTPUT_DIR = Path.Combine(projectPath, "Generated");
+            
             var model = new Model.Model(new Repository(GetGitRoot()));
 
             Directory.GetFiles(TEMPLATE_DIR, "*.stg")

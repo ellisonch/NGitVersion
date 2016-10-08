@@ -59,15 +59,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <None Include="packages.config" />
     <None Include="Resource\Readme.md" />
+    <None Include="Templates\GlobalAssemblyInfo.cs.stg" />
     <None Include="Templates\GlobalAssemblyInfo.h.stg" />
+    <None Include="Templates\JustHasChanges.txt.stg" />
+    <None Include="Templates\JustHash.txt.stg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Templates\GlobalAssemblyInfo.cs.stg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resource\version.rc2" />

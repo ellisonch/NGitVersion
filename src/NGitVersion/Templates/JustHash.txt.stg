@@ -1,0 +1,3 @@
+﻿MainTemplate(m) ::= <<
+<m.ShortHash>
+>>
